@@ -1,5 +1,5 @@
 import streamlit
-import request
+import requests
 
 def get_weather_info(location_name):
     api_key='0d4be18c209e1127a2eb7dca54706dfa'
