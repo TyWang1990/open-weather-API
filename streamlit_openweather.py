@@ -15,7 +15,8 @@ def get_weather_info(location_name):
     cur_temp=data_2['main']['temp']
     return f"The current temperature of {location_name} is: {cur_temp}°C", f"The current weather of {location_name} is: {cur_weather}"
 
-streamlit.title('🌁 Weather Data & Trends Dashboard 🌁 ')
+streamlit.title('Weather Data & Trends Dashboard')
+streamlit.header('🌁City temperature and weather🌁')
 city_choice = streamlit.text_input('Which city would you like the check?', 'London')
 
 streamlit.text(get_weather_info(city_choice)[0])
