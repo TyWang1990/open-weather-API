@@ -14,7 +14,7 @@ humidity=[]
 
 def get_weather_info(location_name):
     api_key='0d4be18c209e1127a2eb7dca54706dfa'
-    url_coordinates=f"http://api.openweathermap.org/geo/1.0/direct?q={location_name}&limit=5&appid={api_key}"
+    url_coordinates=f"http://api.openweathermap.org/geo/1.0/direct?q={location_name}&limit=1&appid={api_key}"
     response_1=requests.get(url_coordinates)
     data_1=response_1.json()
     lat=data_1[0]["lat"]
