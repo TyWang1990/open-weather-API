@@ -13,7 +13,21 @@ def get_weather_info(location_name):
     data_2=response_2.json()
     cur_weather=data_2['weather'][0]['main']
     cur_temp=data_2['main']['temp']
-    return f"The current temperature of {location_name} is: {cur_temp}°C", f"The current weather of {location_name} is: {cur_weather}"
+    cur_min=data_2['main']['temp_min']
+    cur_max=data_2['main']['temp_max']
+    cur_hum=data_2['main']['humidity']
+    
+    df=pd.DataFrame(
+    {
+    'weather': [cur_weather],
+    'temp':[cur_temp],
+    'temp_min': [cur_min],
+    'temp_max':[cur_max],
+    'humidity':[cur_hum]
+    },
+    index=[location_name]
+    )
+    return df
 
 streamlit.title('Weather Data & Trends Dashboard')
 streamlit.header('🌁City temperature and weather 🌃')
