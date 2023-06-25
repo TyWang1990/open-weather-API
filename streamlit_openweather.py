@@ -56,4 +56,4 @@ def color_background(val):
         color = "blue"
     return f'background-color: {color}'
 
-streamlit.dataframe(df.style.applymap(color_background, subset=['temp', 'temp_min', 'temp_max']))
+streamlit.dataframe(df.style.applymap(color_background, subset=['temp']))
