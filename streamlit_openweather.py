@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 
 # create an empty dictionary
-keys=['weather', 'temp', 'temp_min', 'temp_max', 'humidity']
+keys=['city', 'weather', 'temp', 'temp_min', 'temp_max', 'humidity']
 my_dic={key: None for key in keys}
 
 weather=[]
@@ -11,6 +11,7 @@ temp=[]
 temp_min=[]
 temp_max=[]
 humidity=[]
+city=[]
 
 def get_weather_info(location_name):
     api_key='0d4be18c209e1127a2eb7dca54706dfa'
@@ -27,6 +28,7 @@ def get_weather_info(location_name):
     temp_min.append(data_2['main']['temp_min'])
     temp_max.append(data_2['main']['temp_max'])
     humidity.append(data_2['main']['humidity'])
+    city.append(location_name)
 
 streamlit.title('Weather Data & Trends Dashboard')
 streamlit.header('🌁City temperature and weather 🌃')
@@ -41,6 +43,7 @@ my_dic['temp']=temp
 my_dic['temp_min']=temp_min
 my_dic['temp_max']=temp_max
 my_dic['humidity']=humidity
+my_dic['city']=city
 
 df=pd.DataFrame(my_dic)
 
