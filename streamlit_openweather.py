@@ -28,7 +28,7 @@ def get_weather_info(location_name):
     temp_min.append(data_2['main']['temp_min'])
     temp_max.append(data_2['main']['temp_max'])
     humidity.append(data_2['main']['humidity'])
-    city.append(location_name)
+    city.append(str(location_name))
 
 streamlit.title('Weather Data & Trends Dashboard')
 streamlit.header('🌁City temperature and weather 🌃')
