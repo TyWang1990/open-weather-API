@@ -17,7 +17,6 @@ def get_weather_info(location_name):
 
 streamlit.title('Weather Data & Trends Dashboard')
 streamlit.header('🌁City temperature and weather 🌃')
-city_choice = streamlit.text_input('Which city would you like the check?', 'London')
+city_choice = streamlit.text_input('Which city would you like to check?', 'London')
 
-streamlit.text(get_weather_info(city_choice)[0])
-streamlit.text(get_weather_info(city_choice)[1])
+streamlit.dataframe(get_weather_info(city_choice))
