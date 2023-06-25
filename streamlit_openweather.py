@@ -47,7 +47,7 @@ my_dic['city']=city
 
 df=pd.DataFrame(my_dic)
 
-def color_background(val):
+def color_background(value):
     if value >= 30:
         color = "red"
     elif value < 30 and value > 15:
