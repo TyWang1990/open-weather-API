@@ -47,4 +47,13 @@ my_dic['city']=city
 
 df=pd.DataFrame(my_dic)
 
-streamlit.dataframe(df)
+def color_background(val):
+    if value >= 30:
+    color = "red"
+    elif value < 30 and value > 15:
+    color = "orange"
+    else:
+    color = "blue"
+    return f'background-color: {color}'
+
+streamlit.dataframe(df.style.applymap(color_background, subset=['temp', 'temp_min', 'temp_max']))
