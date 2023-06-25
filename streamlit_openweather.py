@@ -32,6 +32,7 @@ streamlit.title('Weather Data & Trends Dashboard')
 streamlit.header('🌁City temperature and weather 🌃')
 city_choice=['Bandon', 'Bend', 'Cameron Park', 'Fort Collins', 'Grants Pass', 'Littleton', 'Madras', 'Medford', 'Redmond', 'Roseburg', 'Sacramento']
 cities_selected=streamlit.multiselect("Pick some cities:", city_choice,['Bandon', 'Bend'])
+streamlit.text('city selected: '+ cities_selected)
 
 for city in cities_selected:
     get_weather_info(city)
