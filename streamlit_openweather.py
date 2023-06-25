@@ -49,11 +49,11 @@ df=pd.DataFrame(my_dic)
 
 def color_background(val):
     if value >= 30:
-    color = "red"
+        color = "red"
     elif value < 30 and value > 15:
-    color = "orange"
+        color = "orange"
     else:
-    color = "blue"
+        color = "blue"
     return f'background-color: {color}'
 
 streamlit.dataframe(df.style.applymap(color_background, subset=['temp', 'temp_min', 'temp_max']))
