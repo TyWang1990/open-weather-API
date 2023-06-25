@@ -28,15 +28,15 @@ def get_weather_info(location_name):
     temp_min.append(data_2['main']['temp_min'])
     temp_max.append(data_2['main']['temp_max'])
     humidity.append(data_2['main']['humidity'])
-    city.append(str(location_name))
+    city.append(location_name)
 
 streamlit.title('Weather Data & Trends Dashboard')
 streamlit.header('🌁City temperature and weather 🌃')
 city_choice=['Bandon', 'Bend', 'Cameron Park', 'Fort Collins', 'Grants Pass', 'Littleton', 'Madras', 'Medford', 'Redmond', 'Roseburg', 'Sacramento']
 cities_selected=streamlit.multiselect("Pick some cities:", city_choice,['Bandon', 'Bend'])
 
-for city in cities_selected:
-    get_weather_info(city)
+for i in cities_selected:
+    get_weather_info(i)
 
 my_dic['weather']=weather
 my_dic['temp']=temp
