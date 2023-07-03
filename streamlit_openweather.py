@@ -99,7 +99,7 @@ def get_history_weather_info(location_name):
 
 streamlit.header('🌁City temperature and weather 🌃')
 
-cities_selected_2=streamlit.multiselect("Pick some cities: ", city_choice, ['Bandon', 'Bend'])
+cities_selected_2=streamlit.multiselect("Pick some cities: ", city_choice, ['Bandon', 'Bend','Cameron Park', 'Fort Collins', 'Grants Pass'])
 
 concatenated_df = pd.DataFrame()
 
