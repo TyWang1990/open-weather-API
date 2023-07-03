@@ -31,7 +31,7 @@ def get_weather_info(location_name):
     city.append(location_name)
 
 streamlit.title('Weather Data & Trends Dashboard')
-streamlit.header('🌁City temperature and weather 🌃')
+streamlit.header('🌁Current city temperature and weather 🌃')
 city_choice=['Bandon', 'Bend', 'Cameron Park', 'Fort Collins', 'Grants Pass', 'Littleton', 'Madras', 'Medford', 'Redmond', 'Roseburg', 'Sacramento']
 cities_selected=streamlit.multiselect("Pick some cities:", city_choice,['Bandon', 'Bend'])
 
@@ -57,3 +57,6 @@ def color_background(value):
     return f'background-color: {color}'
 
 streamlit.dataframe(df.style.applymap(color_background, subset=['temp', 'temp_min', 'temp_max']))
+
+cities_selected=streamlit.multiselect("Pick some cities: ", city_choice, ['Bandon', 'Bend'])
+
