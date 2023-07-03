@@ -20,7 +20,7 @@ def get_weather_info(location_name):
     data_1=response_1.json()
     lat=data_1[0]["lat"]
     lon=data_1[0]["lon"]
-    url_weather=f"http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={api_key}&units=metric"
+    url_weather=f"http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={api_key}&units=metric&units=metric"
     response_2=requests.get(url_weather)
     data_2=response_2.json()
     weather.append(data_2['weather'][0]['main'])
