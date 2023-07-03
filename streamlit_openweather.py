@@ -102,7 +102,7 @@ cities_selected_2=streamlit.multiselect("Pick some cities: ", city_choice, ['Ban
 concatenated_df = pd.DataFrame()
 
 for city in cities_selected_2:
-    temp_df=get_history_weather_info(i)
+    temp_df=get_history_weather_info(city)
     concatenated_df=pd.concat([temp_df, concatenated_df], axis=1)
 
 streamlit.dataframe(concatenated_df.style.applymap(color_background))
