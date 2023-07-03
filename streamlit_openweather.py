@@ -96,7 +96,9 @@ def get_history_weather_info(location_name):
     single_df = pd.DataFrame(modified_dict.values(), index=pd.MultiIndex.from_tuples(modified_dict.keys()))
     single_df = single_df.rename(columns={0: location_name})
     return single_df
-    
+
+streamlit.header('🌁City temperature and weather 🌃')
+
 cities_selected_2=streamlit.multiselect("Pick some cities: ", city_choice, ['Bandon', 'Bend'])
 
 concatenated_df = pd.DataFrame()
