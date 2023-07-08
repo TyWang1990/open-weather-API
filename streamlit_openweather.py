@@ -98,7 +98,7 @@ def get_history_weather_info(location_name):
     single_df = single_df.rename(columns={0: location_name})
     return single_df
 
-streamlit.header('🌁City temperature and weather 🌃')
+streamlit.header('🌁Forcast city temperature and weather 🌃')
 
 cities_selected_2=streamlit.multiselect("Pick some cities: ", city_choice, ['Bandon', 'Bend','Cameron Park', 'Fort Collins', 'Grants Pass'])
 
@@ -108,4 +108,4 @@ for city in cities_selected_2:
     temp_df=get_history_weather_info(city)
     concatenated_df=pd.concat([temp_df, concatenated_df], axis=1)
 
-streamlit.dataframe(concatenated_df.style.applymap(color_background))
+streamlit.dataframe(concatenated_df)
