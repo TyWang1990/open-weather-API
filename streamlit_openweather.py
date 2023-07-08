@@ -47,16 +47,16 @@ my_dic['city']=city
 
 df=pd.DataFrame(my_dic)
 
-def color_background(value):
-    if value >= 30:
-        color = "lightcoral"
-    elif value < 30 and value > 15:
-        color = "lemonchiffon"
-    else:
-        color = "lightskyblue"
-    return f'background-color: {color}'
+# def color_background(value):
+#     if value >= 30:
+#         color = "lightcoral"
+#     elif value < 30 and value > 15:
+#         color = "lemonchiffon"
+#     else:
+#         color = "lightskyblue"
+#     return f'background-color: {color}'
 
-streamlit.dataframe(df.style.applymap(color_background, subset=['temp (°C)', 'temp_min (°C)', 'temp_max (°C)']))
+streamlit.dataframe(df)
 streamlit.text('Note:')
 streamlit.text('temp_min/max: Minimum/maximum temperature at the moment. This is minimal currently observed temperature (within large megalopolises and urban areas).')
 
