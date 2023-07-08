@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 
 # create an empty dictionary
-keys=['city', 'weather', 'temp', 'temp_min', 'temp_max', 'humidity']
+keys=['city','weather', 'temp (°C)', 'temp_min (°C)', 'temp_max (°C)', 'humidity (%)']
 my_dic={key: None for key in keys}
 
 weather=[]
@@ -39,10 +39,10 @@ for i in cities_selected:
     get_weather_info(i)
 
 my_dic['weather']=weather
-my_dic['temp']=temp
-my_dic['temp_min']=temp_min
-my_dic['temp_max']=temp_max
-my_dic['humidity']=humidity
+my_dic['temp (°C)']=temp
+my_dic['temp_min (°C)']=temp_min
+my_dic['temp_max (°C)']=temp_max
+my_dic['humidity (%)']=humidity
 my_dic['city']=city
 
 df=pd.DataFrame(my_dic)
@@ -56,7 +56,7 @@ def color_background(value):
         color = "lightskyblue"
     return f'background-color: {color}'
 
-streamlit.dataframe(df.style.applymap(color_background, subset=['temp', 'temp_min', 'temp_max']))
+streamlit.dataframe(df.style.applymap(color_background, subset=['temp (°C)', 'temp_min (°C)', 'temp_max (°C)']))
 streamlit.text('Note:')
 streamlit.text('temp_min/max: Minimum/maximum temperature at the moment. This is minimal currently observed temperature (within large megalopolises and urban areas).')
 
