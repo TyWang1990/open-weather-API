@@ -16,7 +16,7 @@ Before running the application, ensure that you have the following packages inst
 
 1. Open your web browser and navigate to the provided URL: [Weather App](https://tywang1990-openweather-api-streamlit-openweather-lmj4tg.streamlit.app/). (please get in touch if the app is not running and it might need to be activated).
 
-![Screenshot 2023-07-08 234728](https://github.com/TyWang1990/openweather_API/assets/111158867/61e43332-57b4-4c34-b5c1-7f850cf7b66a)
+![Web capture_8-7-2023_235853_tywang1990-openweather-api-streamlit-openweather-lmj4tg streamlit app](https://github.com/TyWang1990/openweather_API/assets/111158867/3d6b1f58-3657-4ba0-988c-11c64686227c)
 
 2. Use the dropdown lists to select your desired city.
 3. The app will display the current weather conditions and forecast information for the selected city.
