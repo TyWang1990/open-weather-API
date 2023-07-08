@@ -57,6 +57,7 @@ def color_background(value):
     return f'background-color: {color}'
 
 streamlit.dataframe(df.style.applymap(color_background, subset=['temp', 'temp_min', 'temp_max']))
+streamlit.text('temp_min/max: Minimum/maximum temperature at the moment. This is minimal currently observed temperature (within large megalopolises and urban areas).')
 
 
 
