@@ -46,7 +46,7 @@ my_dic['humidity (%)']=humidity
 my_dic['city']=city
 
 df=pd.DataFrame(my_dic)
-
+df.set_index('city', inplace=True)
 # def color_background(value):
 #     if value >= 30:
 #         color = "lightcoral"
