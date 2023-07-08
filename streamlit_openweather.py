@@ -80,7 +80,7 @@ def get_history_weather_info(location_name):
         list_temp_min.append(data_2['list'][i]['main']['temp_min'])
         list_temp_max.append(data_2['list'][i]['main']['temp_max'])
     keys=list_datetime
-    keys_2=['temp_min', 'temp_max']
+    keys_2=['temp_min (°C)', 'temp_max (°C)']
     dic_forecast={}
     for i in keys:
         for j in keys_2:
